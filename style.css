@@ -36,11 +36,9 @@ header {
     left: 0;
     width: 100%;
     min-height: 70px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 12px 40px;
     background: rgba(255, 255, 255, 0.93);
     z-index: 100;
@@ -526,34 +524,42 @@ footer {
 }
 
 /* =========================
-   mobile
+   mobile：スマホ表示の改善
 ========================= */
 
 @media (max-width: 800px) {
 
+    /* ヘッダー */
+
     header {
         position: relative;
         height: auto;
+        min-height: 0;
         flex-direction: column;
-        gap: 10px;
-        padding: 15px 20px;
+        gap: 12px;
+        padding: 16px 15px;
     }
 
     .logo {
-        font-size: 14px;
+        font-size: 16px;
+        text-align: center;
+        white-space: normal;
     }
 
     nav {
-        gap: 10px;
-        flex-wrap: wrap;
+        width: 100%;
+        gap: 8px;
         justify-content: center;
     }
 
     nav a {
-        font-size: 11px;
+        display: inline-block;
+        padding: 6px 8px;
+        font-size: 12px;
+        line-height: 1.5;
     }
 
-    /* トップ画像は横幅に合わせて全体表示 */
+    /* トップ画像 */
 
     .hero {
         width: 100%;
@@ -562,73 +568,147 @@ footer {
     }
 
     .hero img {
+        display: block;
         width: 100%;
         height: auto;
         object-fit: contain;
     }
 
-    /* section */
+    /* 各セクション */
 
     .section {
-        padding: 80px 20px;
+        padding: 55px 16px;
     }
 
-    .section-title h2 {
-        font-size: 32px;
+    .section-title {
+        gap: 10px;
+        margin-bottom: 28px;
+        flex-wrap: wrap;
     }
 
-    .content-box {
-        padding: 30px;
-    }
-
-    /* games */
-
-    .game-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* shop */
-
-    .shop-card {
-        padding: 30px;
-    }
-
-    /* campaign */
-
-    .campaign-section {
-        padding: 80px 20px;
-    }
-
-    .campaign-box {
-        padding: 50px 20px;
-    }
-
-    .campaign-box h3 {
-        font-size: 27px;
-    }
-
-    .campaign-conditions {
-        width: 100%;
-        max-width: 360px;
-    }
-
-    .campaign-conditions p {
+    .section-title span {
         font-size: 14px;
     }
 
-    .sticker-text {
+    .section-title h2 {
+        font-size: clamp(25px, 7vw, 32px);
+        overflow-wrap: anywhere;
+    }
+
+    /* 会社情報などのボックス */
+
+    .content-box {
+        padding: 24px 20px;
+        border-radius: 16px;
+    }
+
+    .content-box h3 {
+        font-size: 23px;
+    }
+
+    .content-box p {
+        font-size: 15px;
+        overflow-wrap: anywhere;
+    }
+
+    /* 店舗情報 */
+
+    .blue-section {
+        padding: 55px 16px;
+    }
+
+    .shop-card {
+        padding: 24px 18px;
+        border-radius: 16px;
+    }
+
+    .shop-card h3 {
+        font-size: 24px;
+        overflow-wrap: anywhere;
+    }
+
+    .station {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+    .shop-message {
+        font-size: 15px;
+    }
+
+    .opening-hours {
+        padding: 18px 15px;
+    }
+
+    .opening-hours h4 {
         font-size: 18px;
     }
 
-    /* character */
+    .time {
+        font-size: 21px;
+    }
+
+    .closing-note {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    /* ゲーム一覧：スマホでは2列 */
+
+    .game-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .game-card {
+        border-radius: 12px;
+    }
+
+    .game-card:hover {
+        transform: none;
+    }
+
+    .game-image {
+        aspect-ratio: 1 / 1;
+        font-size: 16px;
+    }
+
+    .game-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .game-card h3 {
+        padding: 12px 10px 6px;
+        font-size: 16px;
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+    }
+
+    .game-card .game-maker {
+        padding: 0 10px 6px;
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .game-card p {
+        padding: 0 10px 16px;
+        font-size: 13px;
+        line-height: 1.7;
+        overflow-wrap: anywhere;
+    }
+
+    /* キャラクター */
 
     .character-box {
-        grid-template-columns: 1fr;
-        gap: 30px;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
     }
 
     .character-image {
-        min-height: 300px;
+        min-height: 260px;
+        border-radius: 18px;
     }
 
     .character-image img {
@@ -637,23 +717,164 @@ footer {
     }
 
     .character-text h3 {
-        font-size: 30px;
+        font-size: 28px;
+        margin-bottom: 18px;
+        overflow-wrap: anywhere;
     }
 
-    /* SNS */
+    .character-text p {
+        font-size: 15px;
+    }
+
+    /* キャンペーン */
+
+    .campaign-section {
+        padding: 55px 16px;
+    }
+
+    .campaign-box {
+        padding: 35px 18px;
+        border-radius: 18px;
+    }
+
+    .campaign-box h3 {
+        font-size: 25px;
+    }
+
+    .campaign-box p {
+        font-size: 14px;
+        overflow-wrap: anywhere;
+    }
+
+    .campaign-conditions {
+        width: 100%;
+        max-width: 360px;
+        margin: 22px auto;
+    }
+
+    .campaign-conditions p {
+        font-size: 13px;
+        overflow-wrap: anywhere;
+    }
+
+    .sticker-text {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+    /* ボタン：指で押しやすく */
+
+    .button {
+        display: inline-flex;
+        min-height: 48px;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 24px;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .pdf-button-area {
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    /* 求人情報 */
+
+    .recruit-box h3 {
+        font-size: 23px;
+    }
+
+    .recruit-main {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .job-info {
+        padding: 20px 16px;
+        margin: 24px auto;
+    }
+
+    .job-info p {
+        font-size: 14px;
+        overflow-wrap: anywhere;
+    }
+
+    /* SNS・お問い合わせ */
+
+    .contact-section {
+        padding: 60px 16px;
+    }
+
+    .contact-section h2 {
+        font-size: 32px;
+    }
+
+    .contact-label {
+        letter-spacing: 3px;
+    }
 
     .sns-buttons {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
+        gap: 12px;
+        width: 100%;
+        max-width: 320px;
+        margin: 28px auto 0;
     }
 
     .sns-button {
-        width: 220px;
+        display: flex;
+        width: 100%;
+        min-width: 0;
+        min-height: 48px;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 20px;
+        font-size: 15px;
     }
 
-    /* opening */
+    /* フッター */
 
-    .closing-note {
+    footer {
+        padding: 20px 12px;
         font-size: 12px;
+    }
+}
+
+/* =========================
+   小さいスマホ
+========================= */
+
+@media (max-width: 380px) {
+
+    .section {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    .game-grid {
+        gap: 8px;
+    }
+
+    .game-card h3 {
+        font-size: 14px;
+        padding: 10px 8px 5px;
+    }
+
+    .game-card .game-maker {
+        padding-right: 8px;
+        padding-left: 8px;
+        font-size: 11px;
+    }
+
+    .game-card p {
+        padding-right: 8px;
+        padding-left: 8px;
+        font-size: 12px;
+    }
+
+    .shop-card {
+        padding: 20px 14px;
     }
 }

@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,7 +15,6 @@ body {
         "Hiragino Kaku Gothic ProN",
         "Yu Gothic",
         sans-serif;
-
     color: #222;
     background: #fff;
     line-height: 1.8;
@@ -26,7 +26,6 @@ a {
     color: inherit;
 }
 
-
 /* =========================
    header
 ========================= */
@@ -35,7 +34,6 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-
     width: 100%;
     min-height: 70px;
 
@@ -44,9 +42,7 @@ header {
     justify-content: space-between;
 
     padding: 12px 40px;
-
     background: rgba(255, 255, 255, 0.93);
-
     z-index: 100;
 }
 
@@ -73,23 +69,23 @@ nav a:hover {
     color: #6b705c;
 }
 
-
 /* =========================
    hero
 ========================= */
 
 .hero {
     width: 100%;
-    height: 100vh;
-    min-height: 650px;
-
-    background-image: url("sky.jpg");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    height: auto;
+    min-height: 0;
+    background: none;
 }
 
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
 
 /* =========================
    section
@@ -98,9 +94,7 @@ nav a:hover {
 .section {
     width: 100%;
     max-width: 1100px;
-
     margin: 0 auto;
-
     padding: 120px 40px;
 }
 
@@ -108,13 +102,11 @@ nav a:hover {
     display: flex;
     align-items: baseline;
     gap: 20px;
-
     margin-bottom: 55px;
 }
 
 .section-title span {
     color: #6b705c;
-
     font-size: 18px;
     font-weight: bold;
 }
@@ -124,7 +116,6 @@ nav a:hover {
     line-height: 1.2;
 }
 
-
 /* =========================
    content
 ========================= */
@@ -132,19 +123,14 @@ nav a:hover {
 .content-box {
     width: 100%;
     max-width: 800px;
-
     margin: 0 auto;
-
     padding: 45px;
-
     background: #f5f5f2;
-
     border-radius: 20px;
 }
 
 .content-box h3 {
     font-size: 28px;
-
     margin-bottom: 10px;
 }
 
@@ -152,24 +138,20 @@ nav a:hover {
     margin-top: 20px;
 }
 
-
 /* =========================
    company
 ========================= */
 
 .company-year {
     color: #6b705c;
-
     font-size: 20px;
     font-weight: bold;
-
     margin: 5px 0 25px !important;
 }
 
 .company-main {
     font-size: 25px;
     font-weight: bold;
-
     margin-bottom: 15px;
 }
 
@@ -177,52 +159,40 @@ nav a:hover {
     margin-top: 35px;
 }
 
-
 /* =========================
    shop
 ========================= */
 
 .blue-section {
     width: 100%;
-
     background: #eef0e8;
-
     padding: 120px 40px;
 }
 
 .section-inner {
     width: 100%;
     max-width: 1020px;
-
     margin: 0 auto;
 }
 
 .shop-card {
     width: 100%;
-
     background: #fff;
-
     padding: 50px;
-
     border-radius: 20px;
-
-    box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .shop-card h3 {
     font-size: 30px;
     line-height: 1.4;
-
     margin-bottom: 20px;
 }
 
 .station {
     color: #6b705c;
-
     font-size: 22px;
     font-weight: bold;
-
     margin: 25px 0;
 }
 
@@ -232,43 +202,33 @@ nav a:hover {
 
 .opening-hours {
     margin-top: 35px;
-
     padding: 25px;
-
     background: #eef0e8;
-
     border-radius: 15px;
 }
 
 .opening-hours h4 {
     font-size: 20px;
-
     margin-bottom: 20px;
 }
 
 .day + .day {
     margin-top: 20px;
-
     padding-top: 20px;
-
     border-top: 1px solid #d2d5c9;
 }
 
 .time {
     color: #6b705c;
-
     font-size: 25px;
     font-weight: bold;
 }
 
 .closing-note {
     margin-top: 8px;
-
     font-size: 13px;
-
     color: #666;
 }
-
 
 /* =========================
    games
@@ -276,24 +236,16 @@ nav a:hover {
 
 .game-grid {
     width: 100%;
-
     display: grid;
-
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 25px;
 }
 
 .game-card {
     min-width: 0;
-
     background: #f5f5f2;
-
     border-radius: 20px;
-
     overflow: hidden;
-
     transition: 0.3s;
 }
 
@@ -301,42 +253,31 @@ nav a:hover {
     transform: translateY(-8px);
 }
 
-
 /* ゲーム画像はすべて正方形 */
 
 .game-image {
     width: 100%;
-
     aspect-ratio: 1 / 1;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     background: #e2e4da;
-
     color: #6b705c;
-
     font-size: 24px;
     font-weight: bold;
-
     overflow: hidden;
 }
 
 .game-image img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
-
     display: block;
 }
 
 .game-card h3 {
     padding: 25px 25px 8px;
-
     font-size: 22px;
-
     line-height: 1.4;
 }
 
@@ -346,13 +287,10 @@ nav a:hover {
 
 .game-card .game-maker {
     padding: 0 25px 8px;
-
     color: #6b705c;
-
     font-size: 14px;
     font-weight: bold;
 }
-
 
 /* =========================
    character
@@ -360,71 +298,50 @@ nav a:hover {
 
 .character-box {
     width: 100%;
-
     display: grid;
-
-    grid-template-columns:
-        minmax(0, 1fr)
-        minmax(0, 1fr);
-
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 60px;
-
     align-items: center;
 }
 
 .character-image {
     width: 100%;
     min-height: 400px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     background: #f1f1ed;
-
     border-radius: 25px;
-
     color: #999;
-
     overflow: hidden;
 }
 
 .character-image img {
     width: 45%;
     max-width: 220px;
-
     height: auto;
-
     object-fit: contain;
-
     display: block;
 }
 
 .character-image p {
     font-size: 14px;
-
     letter-spacing: 3px;
 }
 
 .character-label {
     color: #6b705c;
-
     font-size: 13px;
     font-weight: bold;
-
     letter-spacing: 4px;
-
     margin-bottom: 15px;
 }
 
 .character-text h3 {
     font-size: 38px;
-
     line-height: 1.3;
-
     margin-bottom: 30px;
 }
-
 
 /* =========================
    campaign
@@ -432,49 +349,36 @@ nav a:hover {
 
 .campaign-section {
     width: 100%;
-
     background: #f1f0e8;
-
     padding: 120px 40px;
 }
 
 .campaign-inner {
     width: 100%;
     max-width: 1020px;
-
     margin: 0 auto;
 }
 
 .campaign-box {
     width: 100%;
-
     text-align: center;
-
     background: #fff;
-
     padding: 70px 30px;
-
     border-radius: 25px;
-
     overflow: hidden;
 }
 
 .campaign-label {
     color: #6b705c;
-
     font-size: 13px;
     font-weight: bold;
-
     letter-spacing: 4px;
-
     margin-bottom: 15px;
 }
 
 .campaign-box h3 {
     font-size: 35px;
-
     line-height: 1.4;
-
     margin-bottom: 25px;
 }
 
@@ -482,14 +386,11 @@ nav a:hover {
     margin-bottom: 10px;
 }
 
-
 /* キャンペーン参加条件 */
 
 .campaign-conditions {
     width: fit-content;
-
     margin: 25px auto 30px;
-
     text-align: left;
 }
 
@@ -501,16 +402,13 @@ nav a:hover {
     color: #6b705c;
 }
 
-
 /* ステッカー */
 
 .sticker-text {
     font-size: 21px;
     font-weight: bold;
-
     margin: 25px 0 0 !important;
 }
-
 
 /* =========================
    button
@@ -518,26 +416,18 @@ nav a:hover {
 
 .button {
     display: inline-block;
-
     padding: 12px 35px;
-
     background: #6b705c;
-
     color: #fff;
-
     border-radius: 30px;
-
     font-weight: bold;
-
     transition: 0.3s;
 }
 
 .button:hover {
     transform: translateY(-3px);
-
     background: #4f5344;
 }
-
 
 /* =========================
    recruit
@@ -546,35 +436,27 @@ nav a:hover {
 .recruit-box {
     width: 100%;
     max-width: 800px;
-
     text-align: center;
 }
 
 .recruit-box h3 {
     font-size: 28px;
-
     margin-bottom: 20px;
 }
 
 .recruit-main {
     font-size: 19px;
     font-weight: bold;
-
     color: #6b705c;
 }
 
 .job-info {
     width: 100%;
     max-width: 550px;
-
     margin: 30px auto;
-
     padding: 25px;
-
     background: #fff;
-
     border-radius: 15px;
-
     text-align: left;
 }
 
@@ -586,62 +468,44 @@ nav a:hover {
     margin-bottom: 0;
 }
 
-
 /* =========================
    contact
 ========================= */
 
 .contact-section {
     width: 100%;
-
     padding: 120px 40px;
-
     text-align: center;
-
     background: #6b705c;
-
     color: #fff;
 }
 
 .contact-label {
     font-size: 13px;
-
     letter-spacing: 5px;
-
     margin-bottom: 15px;
 }
 
 .contact-section h2 {
     font-size: 45px;
-
     margin-bottom: 20px;
 }
 
 .sns-buttons {
     display: flex;
-
     justify-content: center;
-
     gap: 20px;
-
     margin-top: 40px;
 }
 
 .sns-button {
     display: inline-block;
-
     min-width: 180px;
-
     padding: 13px 30px;
-
     background: #fff;
-
     color: #6b705c;
-
     border-radius: 50px;
-
     font-weight: bold;
-
     transition: 0.3s;
 }
 
@@ -649,23 +513,17 @@ nav a:hover {
     transform: translateY(-5px);
 }
 
-
 /* =========================
    footer
 ========================= */
 
 footer {
     padding: 25px;
-
     text-align: center;
-
     background: #33362d;
-
     color: #fff;
-
     font-size: 13px;
 }
-
 
 /* =========================
    mobile
@@ -675,13 +533,9 @@ footer {
 
     header {
         position: relative;
-
         height: auto;
-
         flex-direction: column;
-
         gap: 10px;
-
         padding: 15px 20px;
     }
 
@@ -691,9 +545,7 @@ footer {
 
     nav {
         gap: 10px;
-
         flex-wrap: wrap;
-
         justify-content: center;
     }
 
@@ -701,13 +553,19 @@ footer {
         font-size: 11px;
     }
 
-
-    /* hero */
+    /* トップ画像は横幅に合わせて全体表示 */
 
     .hero {
-        min-height: 600px;
+        width: 100%;
+        height: auto;
+        min-height: 0;
     }
 
+    .hero img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
 
     /* section */
 
@@ -723,20 +581,17 @@ footer {
         padding: 30px;
     }
 
-
     /* games */
 
     .game-grid {
         grid-template-columns: 1fr;
     }
 
-
     /* shop */
 
     .shop-card {
         padding: 30px;
     }
-
 
     /* campaign */
 
@@ -765,12 +620,10 @@ footer {
         font-size: 18px;
     }
 
-
     /* character */
 
     .character-box {
         grid-template-columns: 1fr;
-
         gap: 30px;
     }
 
@@ -787,12 +640,10 @@ footer {
         font-size: 30px;
     }
 
-
     /* SNS */
 
     .sns-buttons {
         flex-direction: column;
-
         align-items: center;
     }
 
@@ -800,11 +651,9 @@ footer {
         width: 220px;
     }
 
-
     /* opening */
 
     .closing-note {
         font-size: 12px;
     }
-
 }
